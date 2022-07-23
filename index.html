@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: auto;">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<script src="https://kit.fontawesome.com/1f019ff2f3.js" ></script>
+<link rel="icon" href="download.jpg">
+<title>KYC FORM</title>
+</head>
+<body class="py-5">
+<!-- instruction -->
+<header>
+<div class="container-lg py-3">
+<div class="border border-dark border-bottom-0 bg-warning text-center">
+<h3 class="d-inline">CENTRAL CKYC REGISTRY | Know Your Customer (KYC) Application Form | Individual</h3>
+</div>
+<div class="border border-dark border-bottom-0 ps-3">
+<h4 class="d-inline">IMPORTANT INSTRUCTIONS</h4>
+</div>
+<div class="border border-dark row mx-auto">
+<ol type="A" class="col-lg-9 row">
+<div class="col-lg-6 ps-4">
+<li>Fields marked with '*' are mandatory fields.</li>
+<li>Tick (&#10004) wherever applicable.</li>
+<li>Please fill the form in English and in BLOCK letters.</li>
+<li>Please fill the date in DD-MM-YYYY format.</li>
+<li>For particular section update, please tick (&#10004) in the box section number and strike off the sections not required to be updated.</li>
+</div>
+<div class="col-lg-6 ps-4">
+<li>Please read section wise detailed guidelines/instructions at the end.</li>
+<li>List of State/U.T code as per Indian Motor Vehicle Act, 1988, is available at the end.</li>
+<li>List of two character ISO 3166 country codes is available at the end.</li>
+<li>KYC number of applicant is mandatory for update application.</li>
+<li>The 'OTP-based E-KYC' check box is to be checked for accounts opened using OTP based E-KYC in non face to face mode.</li>
+</div>
+</ol>
+<div class="col-lg-3 ps-5">
+<img src="download.jpg" alt="cersai logo" class="img-fluid">
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- office use -->
+<div class="container-lg py-3" id="ofc_use">
+<div class="row mx-auto">
+<div class="border border-dark border-end-0 col-lg-3 bg-warning d-flex flex-column justify-content-center brdr">
+<h5>FOR OFFICE USE ONLY</h5>
+<p>(to be filled by financial institution)</p>
+</div>
+<div class="col-lg-9">
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 d-flex align-items-center brdr">
+<h4>Application Type*</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 d-flex align-items-center col-lg-1 brdr">
+<input type="checkbox" id="o-new" name="application" value="new" class="check form-check-input me-2" disabled> New
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 d-flex align-items-center col-lg-2 brdr">
+<input type="checkbox" id="o-update" name="application" value="update" class="check form-check-input me-2" disabled> Update
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-4 brdr">
+<h5 class="d-inline">KYC Number</h5>
+<p class="d-inline"> (Mandotary for KYC Update Request)</p>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-2 d-flex align-items-center" name="kyc no" id="o-kyc"></div>
+</div>
+<div class="row">
+<div class="border border-dark border-end-0 col-lg-3 d-flex align-items-center brdr">
+<h4>Account Type*</h4>
+</div>
+<div class="border border-dark border-end-0 d-flex align-items-center col-lg-2 brdr">
+<input type="checkbox" name="account" id="o-normal" value="normal" class="check form-check-input me-2" disabled> Normal
+</div>
+<div class="border border-dark border-end-0 d-flex align-items-center col-lg-2 brdr">
+<input type="checkbox" name="account" id="o-minor" value="minor" class="check form-check-input me-2" disabled> Minor
+</div>
+<div class="border border-dark col-lg-5">
+<input type="checkbox" name="account" id="o-f2f" value="f2f" class="check form-check-input" disabled> Aadhaar OTP-based e-KYC(in non face to face mode)
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- personal details -->
+<div class="container-lg py-3">
+<div class="border border-dark border-bottom-0 bg-warning ps-3" style="width: 99.99%;">
+<h3 class="d-inline"> 1. PERSONAL DETAILS</h3>
+<span class="align-text-bottom"> (Please refer to Instruction A at the end)</span>
+</div>
+<div class="row mx-auto text-center">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr" style="height: 38px;"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h4>Prefix</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4>First Name</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h4>Middle Name</h4>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-2">
+<h4>Last Name</h4>
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Name</h4>
+<p class="d-inline">* (same as ID proof)</p>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-prefix"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr text-uppercase" id="o-fname"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-mname"></div>
+<div class="border border-dark border-bottom-0 col-lg-2 brdr text-uppercase" id="o-lname"></div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Maiden Name</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-mprefix"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr text-uppercase" id="o-mfname"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-mmname"></div>
+<div class="border border-dark border-bottom-0 col-lg-2 brdr text-uppercase" id="o-mlname"></div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Father/Spouse Name</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-fprefix"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr text-uppercase" id="o-ffname"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-fmname"></div>
+<div class="border border-dark border-bottom-0 col-lg-2 brdr text-uppercase" id="o-flname"></div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Mother Name</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-moprefix"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr text-uppercase" id="o-mofname"></div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr text-uppercase" id="o-momname"></div>
+<div class="border border-dark border-bottom-0 col-lg-2 brdr text-uppercase" id="o-molname"></div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Date of Birth*</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr" id="o-dob">
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 brdr">
+<h4 class="d-inline">PAN*</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr text-uppercase" id="o-pan">
+</div>
+<div class="border border-dark border-bottom-0 col-lg-3">
+<h4 class="d-inline">Form 60 furnished</h4>
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Gender*</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<input type="checkbox" name="gender" id="o-male" value="male" class="check form-check-input" disabled> Male
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<input type="checkbox" name="gender" id="o-female" value="female" class="check form-check-input" disabled> Female
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5">
+<input type="checkbox" name="gender" id="o-trans" value="transgender" class="check form-check-input" disabled> Transgender
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Marital Status*</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<input type="checkbox" id="o-married" name="marital" value="married" class="check form-check-input" disabled> Married
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<input type="checkbox" id="o-unmarried" name="marital" value="unmarried" class="check form-check-input" disabled> Unmarried
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5">
+<input type="checkbox" id="o-other" name="marital" value="other" class="check form-check-input" disabled> Others
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Nationality*</h4>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<input type="checkbox" id="o-indian" name="nationality" value="indian" class="check form-check-input" disabled> IN-Indian
+</div>
+<div class="border border-dark border-bottom-0 col-lg-7">
+<input type="checkbox" id="o-others" name="nationality" value="others" class="check form-check-input" disabled> Others(ISO 3166 Country Code)
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-end-0 col-lg-3 brdr">
+<h4 class="d-inline">Residental Status*</h4>
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<input type="checkbox" id="o-ri" name="resident" value="resident individual" class="check form-check-input" disabled> Resident Individual
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<input type="checkbox" id="o-nri" name="resident" value="nri" class="check form-check-input" disabled> Non Resident Indian
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<input type="checkbox" id="o-fn" name="resident" value="foreign national" class="check form-check-input" disabled> Foreign National
+</div>
+<div class="border border-dark col-lg-3">
+<input type="checkbox" id="o-pio" name="resident" value="person of indian origin" class="check form-check-input" disabled> Person of Indian Origin
+</div>
+</div>
+</div>
+<!-- proof of identity & address -->
+<div class="container-lg py-3" id="o-pia">
+<div class="border border-dark border-bottom-0 bg-warning ps-3" style="width: 99.99%;">
+<h3 class="d-inline"> 2. PROOF OF IDENTITY AND ADDRESS*</h3>
+<span class="align-text-bottom"> (Please refer to Instruction B at the end)</span>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="col-lg-9">
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 d-flex brdr">
+<p class="d-inline ps-1">l.</p>
+<p class="d-inline ps-4">Certified copy of OVD or equivalent e-document of OVD or OVD obtained through digital KYC process needs to be submitted (any one of the following OVDs)</p>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-pn" name="OVD" value="passport no" class="check form-check-input" disabled>
+<h5 class="d-inline">A. Passport Number</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-psprt">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-vc" name="OVD" value="voter no" class="check form-check-input" disabled>
+<h5 class="d-inline">B. Voter ID Card</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-vic">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-dlc" name="OVD" value="driving licence" class="check form-check-input" disabled>
+<h5 class="d-inline">C. Driving Licence</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-dl">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-njcc" name="OVD" value="narega job card" class="check form-check-input" disabled>
+<h5 class="d-inline">D. NREGA Job Card</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-njc">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-nprc" name="OVD" value="npr letter" class="check form-check-input" disabled>
+<h5 class="d-inline">E. National Population Register Letter</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-npr">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-ppa" name="OVD" value="proof of possesion of aadhaar" class="check form-check-input" disabled>
+<h5 class="d-inline">F. Proof of Possession of Aadhaar</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-adhr">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr">
+<p class="d-inline">ll.</p>
+<input type="checkbox" id="o-eka" name="OVD" value="e_kyc authentication" class="check form-check-input" disabled>
+<h5 class="d-inline">E-KYC Authentication</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-e-kyc">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr">
+<p class="d-inline">lll.</p>
+<input type="checkbox" id="o-ova" name="OVD" value="offline verification of aadhaar" class="check form-check-input" disabled>
+<h5 class="d-inline">Offline Verification of Aadhaar</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-verification">
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="row" style="height: 65px;">
+<div class="border border-dark border-bottom-0 d-flex align-items-center justify-content-center bg-warning">
+<h4 class="d-inline">PHOTO*</h4>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark" id="file1" >
+<label for="file1" class="d-flex align-items-center justify-content-center" style="height: 212.5px;">
+<img src="" id="display1" style="max-width: 200px;">
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-12 bg-warning ps-3" style="width: 99.99%;">
+<h4 class="d-inline">ADDRESS</h4>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 ps-3 brdr">
+<h6 class="d-inline">Line 1*</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-11 brdr text-uppercase" id="o-add1">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 ps-3 brdr">
+<h6 class="d-inline">Line 2</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-11 brdr text-uppercase" id="o-add2">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 ps-3 brdr">
+<h6 class="d-inline">Line 3</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-11 brdr text-uppercase" id="o-add3">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">City/Town/Village*</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-city1">
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 brdr">
+<h6 class="d-inline">District*</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-4 brdr text-uppercase" id="o-dist1">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">Pin/Post Code*</h6>
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr" id="o-pin1">
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">State/U.T. Code*</h6>
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr text-uppercase" id="o-state1">
+</div>
+<div class="border border-dark border-end-0 col-lg-3 brdr">
+<h6 class="d-inline">ISO 3166 Country Code</h6>
+</div>
+<div class="border border-dark col-lg-1 text-uppercase" id="o-iso1" style="height: 30px;">
+</div>
+</div>
+</div>
+<!-- current address details -->
+<div class="container-lg py-3" id="crnt_add">
+<div class="border border-dark border-bottom-0 bg-warning ps-3" style="width: 99.99%;">
+<h3 class="d-inline"> 3. CURRENT ADDRESS DETAILS</h3>
+<span class="align-text-bottom"> (Please refer to Instruction B at the end)</span>
+</div>
+<div class="border border-dark border-bottom-0 d-flex ps-3" style="width: 99.99%;">
+<input type="checkbox" id="o-same" class="d-inline form-check-input" onclick="autoFill();" disabled>
+<span class="align-text-bottom ps-4">Same as above mentioned address (In such cases, address details as below need not be provided)</span>
+</div>
+<div class="border border-dark border-bottom-0 d-flex ps-3" style="width: 99.99%;">
+<span class="align-text-bottom ps-1">l.</span>
+<span class="align-text-bottom ps-4">Certified copy of OVD or equivalent e-document of OVD or OVD obtained through digital KYC process needs to be submitted (any one of the following OVDs)</span>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-pn1" name="OVDs" value="passport-no" class="check form-check-input" disabled>
+<h5 class="d-inline">A. Passport Number</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-psprt1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-vc1" name="OVDs" value="voter-no" class="check form-check-input" disabled>
+<h5 class="d-inline">B. Voter ID Card</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-vic1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-dlc1" name="OVDs" value="driving-licence" class="check form-check-input" disabled>
+<h5 class="d-inline">C. Driving Licence</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-dl1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-njcc1" name="OVDs" value="nrega-job-card" class="check form-check-input" disabled>
+<h5 class="d-inline">D. NREGA Job Card</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-njc1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-nprc1" name="OVDs" value="npr-letter" class="check form-check-input" disabled>
+<h5 class="d-inline">E. National Population Register Letter</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-npr1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 ps-4 brdr">
+<input type="checkbox" id="o-ppa1" name="OVDs" value="proof-of-possession-of-aadhaar" class="check form-check-input" disabled>
+<h5 class="d-inline">F. Proof of Possession of Aadhaar</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-adhr1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr">
+<p class="d-inline">ll.</p>
+<input type="checkbox" id="o-eka1" value="e-kyc-authentication" class="check form-check-input" name="OVDs" disabled>
+<h5 class="d-inline">E-KYC Authentication</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-e-kyc1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr">
+<p class="d-inline">lll.</p>
+<input type="checkbox" id="o-ova1" value="offline-verification-of-aadhaar" class="check form-check-input" name="OVDs" disabled>
+<h5 class="d-inline">Offline Verification of Aadhaar</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-verification1">
+</div>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr">
+<p class="d-inline">lV.</p>
+<input type="checkbox" id="o-dpa1" value="deemed-proof-of-address" class="check form-check-input" name="OVDs" disabled>
+<h5 class="d-inline">Deemed Proof of Address</h5>
+<p class="d-inline"> - Document Type Code</p>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-5 text-uppercase" id="o-dpa">
+</div>
+</div>
+<div class="border border-dark border-bottom-0 bg-warning ps-3" style="width: 99.99%;">
+<h4 class="d-inline">ADDRESS</h4>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 ps-3 brdr">
+<h6 class="d-inline">Line 1*</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-11 text-uppercase" id="o-cadd1">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 ps-3 brdr">
+<h6 class="d-inline">Line 2</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-11 text-uppercase" id="o-cadd2">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 ps-3 brdr">
+<h6 class="d-inline">Line 3</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-11 text-uppercase" id="o-cadd3">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">City/Town/Village*</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr text-uppercase" id="o-ccity1">
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-1 brdr">
+<h6 class="d-inline">District*</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-4 text-uppercase" id="o-cdist1">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">Pin/Post Code*</h6>
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr" id="o-cpin1"></div>
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">State/U.T. Code*</h6>
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr text-uppercase" id="o-cstate1"></div>
+<div class="border border-dark border-end-0 col-lg-3 brdr">
+<h6 class="d-inline">ISO 3166 Country Code</h6>
+</div>
+<div class="border border-dark col-lg-1 text-uppercase" id="o-ciso1"></div>
+</div>
+</div>
+</div>
+<!-- contact details -->
+<div class="container-lg py-3">
+<div class="border border-dark border-bottom-0 bg-warning ps-3" style="width: 99.99%;">
+<h3 class="d-inline"> 4. CONTACT DETAILS</h3>
+<span class="align-text-bottom">  (All communications will be sent to Mobile number/Email ID provided) (Please refer to Instruction C at the end)</span>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h5 class="d-inline">Tel. (Off)</h5>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-4 brdr" id="o-off">
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h5 class="d-inline">Tel. (Res)</h5>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-4 brdr" id="o-res">
+</div>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<h5 class="d-inline">Mobile</h5>
+</div>
+<div class="border border-dark border-end-0 col-lg-4 brdr" id="o-mob">
+</div>
+<div class="border border-dark border-end-0 col-lg-2 brdr">
+<h5 class="d-inline">Email ID</h5>
+</div>
+<div class="border border-dark col-lg-4 text-uppercase" id="o-email" style="height: 30px;">
+</div>
+</div>
+</div>
+<!-- remark -->
+<div class="container-lg py-3">
+<div class="border border-dark border-bottom-0 bg-warning ps-3">
+<h3 class="d-inline"> 5. REMARKS</h3>
+<span class="align-text-bottom">  (if any)</span>
+</div>
+<div class="row mx-auto">
+<div class="border border-dark text-uppercase" id="o-remark" style="height: 30px;"></div>
+</div>
+</div>
+<!-- application declaration -->
+<div class="container-lg py-3">
+<div class="border border-dark border-bottom-0 bg-warning ps-3">
+<h3 class="d-inline"> 6. APPLICATION DECLARATION</h3>
+</div>
+<div class="row mx-auto">
+<div class="col-lg-9">
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 brdr">
+<ul>
+<li>
+<p>I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief and I 
+undertake to inform you of any changes therein, immediately. In case any of the above information is found to be 
+false or untrue or misleading or misrepresenting, I am aware that I may be held liable for it.
+</p>
+</li>
+<li>
+<p>I hereby consent to receiving information from Central KYC Registry through SMS/Email on the above registered 
+number/email address.
+</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-end-0 col-lg-3 text-center brdr">
+<h4 class="d-inline">Place</h4>
+</div>
+<div class="border border-dark border-end-0 col-lg-9 brdr text-uppercase" id="o-place"></div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="row" style="height: calc(100% - 32px);">
+<div class="border border-dark border-bottom-0">
+<label for="file2" class="d-flex align-items-center justify-content-center" style="height: 125px;">
+<img id="display2" class="w-100 h-100" style="max-width: 250px;">
+</label><br>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark bg-warning text-center" style="height: 32px;">
+<h4 class="d-inline">SIGNATURE(S2)</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- attestation -->
+<div class="container-lg py-3">
+<div class="border border-dark border-bottom-0 bg-warning ps-3" style="width: 99.99%;">
+<h3 class="d-inline"> 7. ATTESTATION/FOR OFFICE USE ONLY</h3>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-3 d-flex align-items-center brdr">
+<h4>Document Received</h4>
+</div>
+<div class="col-lg-9">
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-4 brdr">
+<input type="checkbox" id="o-cc" class="check form-check-input" name="doc" disabled>
+<p class="d-inline"> Certified Copies</p>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-4 brdr">
+<input type="checkbox" id="o-uidai" class="check form-check-input" name="doc" disabled>
+<p class="d-inline"> E-KYC data received from UIDAI</p>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-4">
+<input type="checkbox" id="o-ov" class="check form-check-input" name="doc" disabled>
+<p class="d-inline"> Data received from offline verification</p>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-4 brdr">
+<input type="checkbox" id="o-dkp" class="check form-check-input" name="doc" disabled>
+<p class="d-inline"> Digital KYC Process</p>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-4 brdr">
+<input type="checkbox" id="o-ed" class="check form-check-input" name="doc" disabled>
+<p class="d-inline"> Equivalent e-document</p>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-4">
+<input type="checkbox" id="o-vb" class="check form-check-input" name="doc" disabled>
+<p class="d-inline"> Video based KYC</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border border-dark border-bottom-0 ps-3" style="width: 99.99%;">
+<h4 class="d-inline">IPV Done</h4> on
+<p id="o-ipv" class="d-inline"></p>
+</div>
+<div class="row mx-auto" style="width: 99.99%;">
+<div class="col-lg-6">
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 bg-warning text-center brdr">
+<h4 class="d-inline">KYC VERIFICATION CARRIED OUT BY</h4>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr">
+<h6 class="d-inline">Date</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr" id="o-date">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr">
+<h6 class="d-inline">Emp. Name</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr text-uppercase" id="o-emp-name">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr">
+<h6 class="d-inline">Emp. Code</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr text-uppercase" id="o-emp-code">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr">
+<h6 class="d-inline">Emp. Designation</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr text-uppercase" id="o-emp-desig">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-5 brdr">
+<h6 class="d-inline">Emp. Branch</h6>
+</div>
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-7 brdr text-uppercase" id="o-emp-branch">
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 brdr">
+<label for="file3" class="d-flex align-items-center justify-content-center" style="height: 200px;">
+<img src="" id="display3" class="w-100 h-100" style="max-width: 300px;">
+</label><br>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-end-0 text-center brdr">
+<h4>Employee Signature</h4>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="row">
+<div class="border border-dark border-bottom-0 bg-warning text-center">
+<h4 class="d-inline">INSTITUTION DETAILS</h4>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">Name</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-10">Shriram Insight Share Brokers Ltd.</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0 border-end-0 col-lg-2 brdr">
+<h6 class="d-inline">Code</h6>
+</div>
+<div class="border border-dark border-bottom-0 col-lg-10">IN0349</div>
+</div>
+<div class="row">
+<div class="border border-dark border-bottom-0" style="height: 300px;">
+<label for="file4" class="d-flex align-items-center justify-content-center" style="height: 250px;">
+<img src="" id="display4" class="w-100 h-100 border-0" style="max-width: 300px;">
+</label><br>
+</div>
+</div>
+<div class="row">
+<div class="border border-dark text-center">
+<h4>Institution Stamp</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="output.js" type="text/javascript"></script>
+</body>
+</html>
